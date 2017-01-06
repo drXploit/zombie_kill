@@ -166,13 +166,13 @@ if (horde_effect &gt;= room_speed/5)
                                         {
                                             horde[j].speed = (1.8 * .76);
                                             audio_play_sound(choose(snd_zombie_alive1,snd_zombie_alive2,snd_zombie_alive3,snd_zombie_alive4), 8, false);  // leader makes a sound
-                                            effect_create_below(ef_ring,horde[j].x,horde[j].y,2,horde_effect_color_mad); // leader makes a bigger ping
+                                      //      effect_create_below(ef_ring,horde[j].x,horde[j].y,2,horde_effect_color_mad); // leader makes a bigger ping
                                         }
                                         else
                                         {
                                             horde[j].speed = (1.8 * .75);
                                             horde[j].direction = point_direction(horde[j].x,horde[j].y,obj_player.x,obj_player.y); //horde[first].direction;
-                                            effect_create_below(ef_ring,horde[j].x,horde[j].y,.5,horde_effect_color_mad); // smaller ping for others
+                                   //         effect_create_below(ef_ring,horde[j].x,horde[j].y,.5,horde_effect_color_mad); // smaller ping for others
                                         }
                                     }
                                 }
@@ -188,11 +188,11 @@ if (horde_effect &gt;= room_speed/5)
                             {
                                     horde[i].direction = point_direction(horde[i].x,horde[i].y,x,y);
                             }
-                            else
-                            {
-                                if (alive &gt; 1) effect_create_below(ef_star, horde[i].x, horde[i].y, 0.2, make_color_rgb(211,227,151));//green/yellow
-                                else effect_create_below(ef_star, horde[i].x, horde[i].y, 0.5, c_yellow);//make_color_rgb(100,124,100));//'unreturned'zombie color
-                            }
+                     //       else
+                 //           {
+                    //            if (alive &gt; 1) effect_create_below(ef_star, horde[i].x, horde[i].y, 0.2, make_color_rgb(211,227,151));//green/yellow
+                    //            else effect_create_below(ef_star, horde[i].x, horde[i].y, 0.5, c_yellow);//make_color_rgb(100,124,100));//'unreturned'zombie color
+                      //      }
                     }
                 }
 // HORDE AGGRESSIVE *************************************************************************************
@@ -201,22 +201,22 @@ if (horde_effect &gt;= room_speed/5)
                         if (horde[i].alerted)
                         {
                             cntAggro++;
-                            effect_create_below(ef_ring,horde[i].x,horde[i].y,.5,horde_effect_color_mad);
+                         //   effect_create_below(ef_ring,horde[i].x,horde[i].y,.5,horde_effect_color_mad);
                             if (distance_to_point(horde[i].x,horde[i].y) &gt; 300)
                             {
                                 if (!collision_line(horde[i].x,horde[i].y,x,y,obj_wall_collision,false,true))
                                     horde[i].direction = point_direction(horde[i].x, horde[i].y, x, y);
                                 else
                                 {
-                                    effect_create_above(ef_smokeup,horde[i].x,horde[i].y,1,c_green);
+                  //                  effect_create_above(ef_smokeup,horde[i].x,horde[i].y,1,c_green);
                                     horde[i].x = x;
                                     horde[i].y = y;
-                                    effect_create_above(ef_smoke,x,y,1,c_green);
+                          //          effect_create_above(ef_smoke,x,y,1,c_green);
                                 }
                             }       
                         }
-                        else
-                            effect_create_below(ef_ring, horde[i].x, horde[i].y, 0.5, c_gray);
+                    //    else
+                         //   effect_create_below(ef_ring, horde[i].x, horde[i].y, 0.5, c_gray);
                 }
             }
             else horde[i] = -1;
@@ -225,7 +225,7 @@ if (horde_effect &gt;= room_speed/5)
     
     if (alive == 0) // no enemies = destroy instance
     {
-        effect_create_below(ef_explosion,x,y,horde_amount/2,c_green);
+    //    effect_create_below(ef_explosion,x,y,horde_amount/2,c_green);
         instance_destroy();
     }
     // group aggressive, only one alive, and not alerted, so make group not alerted

@@ -99,8 +99,8 @@ depth = -y;
 if (seperation &gt; 0 )
     move_bounce_solid(true);
 
-if (effect == 5)
-    effect_create_below(ef_ring,x,y,(life/maxlife),c_green);
+//if (effect == 5)
+//    effect_create_below(ef_ring,x,y,(life/maxlife),c_green);
 
 effect--;
 if (effect &lt;= 0) effect = room_speed*2;

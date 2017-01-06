@@ -154,7 +154,7 @@ if (tendancy != -1)
     {
         image_blend = c_white;
 
-        effect_create_above(ef_smokeup,x,y,choose(0.3,0.5,0.8),image_blend);
+    //    effect_create_above(ef_smokeup,x,y,choose(0.3,0.5,0.8),image_blend);
 
         if (instance_exists(obj_blood_control))
         {
@@ -205,7 +205,7 @@ if (alive)
     {
         if (distance_to_point(aliveModifier.x,aliveModifier.y) &lt;= 20)
         {
-            effect_create_above(ef_spark,mean(x,aliveModifier.x),mean(y,aliveModifier.y),2,c_white);
+    //        effect_create_above(ef_spark,mean(x,aliveModifier.x),mean(y,aliveModifier.y),2,c_white);
             speed = 0;
             image_angle = 0;
             image_alpha = 1;
@@ -252,19 +252,19 @@ if (!alive)
     {
         if (image_alpha &gt;= 0.3) 
             image_alpha -= 0.002;
-        else 
-            image_blend = c_gray;
+   //     else 
+   //         image_blend = c_gray;
     }
     else 
         friction += 0.001;
 
     life--;
 
-    if (life == 20)
-        effect_create_below(ef_cloud,x,y,0.5,c_maroon);
+ //   if (life == 20)
+  //      effect_create_below(ef_cloud,x,y,0.5,c_maroon);
 
-    if (life == 10)
-        effect_create_below(ef_cloud,x,y,0.5,c_red);
+//    if (life == 10)
+//        effect_create_below(ef_cloud,x,y,0.5,c_red);
 
     if (life &lt;= 0)
     {
@@ -281,7 +281,7 @@ if (!alive)
             image_xscale *= (0.7*flip);
             image_yscale *= (0.7);
         }
-        effect_create_above(ef_smokeup,x,y,1,c_gray);
+    //    effect_create_above(ef_smokeup,x,y,1,c_gray);
 
         // Play grunt pain sound
         audio_play_sound(snd_whooshy_puff, 5, false);

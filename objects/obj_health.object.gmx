@@ -89,7 +89,7 @@ if (instance_exists(obj_spawn_control))
             <kind>1</kind>
             <string>/// Step
 
-if (effect == 5) effect_create_below(ef_ring,x,y,0.5,c_white);
+//if (effect == 5) effect_create_below(ef_ring,x,y,0.5,c_white);
 
 effect--;
 

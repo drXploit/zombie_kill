@@ -111,7 +111,7 @@ if (!instance_exists(head))    &amp;&amp;
     (!instance_exists(hand1))    &amp;&amp;
     (!instance_exists(hand2))
     {
-        effect_create_above(ef_smoke,x,y,5,c_red);
+       // effect_create_above(ef_smoke,x,y,5,c_red);
         instance_destroy();
     }
     if (head.attached) &amp;&amp;
@@ -122,7 +122,7 @@ if (!instance_exists(head))    &amp;&amp;
         (hand2.attached) 
         {
             scr_textfloat(torso.x,torso.y-sprite_height,c_purple,"Reanimated!"); 
-            effect_create_above(ef_smokeup,torso.x,torso.y,1,c_purple);
+       //     effect_create_above(ef_smokeup,torso.x,torso.y,1,c_purple);
             spawnEnemy = instance_create(torso.x,torso.y,obj_enemy)
             with (spawnEnemy)
             {

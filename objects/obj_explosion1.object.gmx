@@ -38,10 +38,10 @@ image_speed = 0.3;
 instance_create(x,y,obj_fire);
 
 // explosion effect
-effect_create_above(ef_explosion,x,y,2,c_dkgray);
-effect_create_above(ef_explosion,x,y,1.7,c_red);
-effect_create_above(ef_explosion,x,y,1.2,c_orange);
-effect_create_above(ef_explosion,x,y,.8,c_yellow);
+//effect_create_above(ef_explosion,x,y,2,c_dkgray);
+//effect_create_above(ef_explosion,x,y,1.7,c_red);
+//effect_create_above(ef_explosion,x,y,1.2,c_orange);
+//effect_create_above(ef_explosion,x,y,.8,c_yellow);
 
 //
 // Draw an explosion "stain"
@@ -187,7 +187,7 @@ instance_destroy();
             <kind>1</kind>
             <string>/// Draw self
 
-//draw_self();
+draw_self();
 
 </string>
           </argument>

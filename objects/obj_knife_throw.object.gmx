@@ -135,7 +135,7 @@ if (speed == 0) &amp;&amp; (!away)
     rot = 0;
     away = true;
     bosstoss = false;
-    effect_create_above(ef_spark,x,y,1,c_white);
+//    effect_create_above(ef_spark,x,y,1,c_white);
     // Play sound
     audio_play_sound(snd_knife_throw_impact, 7, false);
 }
@@ -248,9 +248,9 @@ if (away)
 
 if (!away)
 {
-   draw_sprite_ext(sprite_index,image_index,oldx3,oldy3,image_xscale,image_yscale,image_angle,c_red,0.1);
-   draw_sprite_ext(sprite_index,image_index,oldx2,oldy2,image_xscale,image_yscale,image_angle,c_red,0.15);
-   draw_sprite_ext(sprite_index,image_index,oldx1,oldy1,image_xscale,image_yscale,image_angle,c_red,0.2);
+   draw_sprite_ext(sprite_index,image_index,oldx3,oldy3,image_xscale,image_yscale,image_angle,c_white,0.1);
+   draw_sprite_ext(sprite_index,image_index,oldx2,oldy2,image_xscale,image_yscale,image_angle,c_white,0.15);
+   draw_sprite_ext(sprite_index,image_index,oldx1,oldy1,image_xscale,image_yscale,image_angle,c_white,0.2);
    draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,1);
 }
 else

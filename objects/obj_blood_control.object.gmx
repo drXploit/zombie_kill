@@ -50,7 +50,7 @@ part_blood_emit = part_emitter_create(part_blood_sys);
 surf_blood = surface_create(room_width, room_height);
 
 // Conservation
-canDraw = true;
+//canDraw = true;
 
 </string>
           </argument>
@@ -101,7 +101,7 @@ global.instances--;
             <kind>1</kind>
             <string>/// Step code
 
-canDraw = true;
+//canDraw = true;
 
 </string>
           </argument>
@@ -187,10 +187,10 @@ if (!surface_exists(surf_blood))
 }
 else
 {
-    if (canDraw) {   
+//    if (canDraw) {   
         draw_surface(surf_blood, 0, 0);
-        canDraw = false;
-    }
+//        canDraw = false;
+//    }
 }
 
 </string>

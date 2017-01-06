@@ -212,17 +212,20 @@ if (friction &gt; 1) friction = 1;
 
 if (!inAir) // limiting flare fps to 60
 {
-//    draw_set_alpha(choose(0.1, 0.3, 0.2));
-    effect_create_above(ef_firework, x, y, choose(0.4,0.6,0.8), choose(c_red,c_white,c_maroon));
-    effect_create_above(ef_flare, x, y, choose(0.6*m,0.8*m), c_maroon);
-    effect_create_above(ef_flare, x, y, choose(1.4*m,1.6*m,1.8*m), c_white);
+    draw_set_alpha(choose(0.1, 0.3, 0.2));
+    draw_set_color(choose(c_red,c_white,c_maroon));
+//    draw_set_alpha(0.2);
+    draw_circle(x,y,choose(10,15,6,8,13),false);
+//    effect_create_above(ef_firework, x, y, choose(0.4,0.6,0.8), choose(c_red,c_white,c_maroon));
+//    effect_create_above(ef_flare, x, y, choose(0.6*m,0.8*m), c_maroon);
+//    effect_create_above(ef_flare, x, y, choose(1.4*m,1.6*m,1.8*m), c_white);
 
 //    draw_set_alpha(1);    
 
 }
 if (inAir)
 {
-    effect_create_below(ef_smokeup, x, y, 0.1, c_dkgray);
+//    effect_create_below(ef_smokeup, x, y, 0.1, c_dkgray);
     if (image_xscale &lt; 0)
     {
         image_angle += 8;

@@ -99,8 +99,8 @@ instance_create(x,y,obj_explosion1);
             <string>/// Step
 
 
-effect_create_below(ef_smoke,x,y,0.8,c_dkgray);
-effect_create_below(ef_smoke,x,y,0.5,c_gray);
+//effect_create_below(ef_smoke,x,y,0.8,c_dkgray);
+//effect_create_below(ef_smoke,x,y,0.5,c_gray);
 
 
 if (origDir != direction)
